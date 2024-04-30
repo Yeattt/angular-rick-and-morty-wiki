@@ -22,7 +22,5 @@ export class WikiHomePageComponent implements OnInit {
         
         this.characters = characters;
       });
-
-    console.log(this.characters);
   }
 }
