@@ -1,0 +1,21 @@
+<div class="w-[440px] h-[220px] bg-primary flex justify-center items-center border-2 border-gray-300">
+  <div class="w-[50%] h-full border-r-2 border-r-gray-300 flex items-center justify-center">
+    <div class="w-[92%] h-[92%] rounded-full border-4 border-white overflow-hidden">
+      <img
+        [src]="character.image"
+        class="object-cover"
+      />
+    </div>
+  </div>
+
+  <div class="w-[50%] text-white flex items-center justify-center flex-col text-center">
+    <h2 class="font-bold text-lg">{{ character.name }}</h2>
+
+    <br />
+
+    <p>Specie: {{ character.species }}</p>
+    <p>Gender: {{ character.gender }}</p>
+    <p>Status: {{ character.status }}</p>
+    <p>Origin: {{ character.origin.name }}</p>
+  </div>
+</div>
