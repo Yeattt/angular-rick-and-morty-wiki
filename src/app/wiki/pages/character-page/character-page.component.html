@@ -1,0 +1,43 @@
+<div class="flex items-center justify-center h-[calc(100vh-375px)] w-screen">
+  <h2
+    *ngIf="!character"
+    class="text-white text-2xl mt-[-150px]"
+  >
+    Character not found
+  </h2>
+
+  <div
+    *ngIf="character"
+    class="bg-primary w-[35%] h-[50%] border-2 border-white p-2 flex items-center justify-between"
+  >
+    <div class="w-[50%] h-[85%] flex items-center justify-center border-r-2 border-white">
+      <div class="w-[17rem] h-[17rem] rounded-full border-2 border-white overflow-hidden">
+        <img
+          [src]="character.image"
+          class="object-cover w-full h-full"
+        />
+      </div>
+    </div>
+
+    <div class="w-[50%] h-[85%] flex items-center justify-center text-white flex-col">
+      <h2 class="font-bold text-xl">{{ character.name }}</h2>
+    
+      <br />
+
+      <div class="flex items-center justify-center flex-col">
+        <span class="flex items-center justify-center">
+          <!-- <span class="w-2 h-2 rounded-full bg-red-600 mr-1">
+
+          </span> -->
+
+          <span>Status: {{ character.status }}</span>
+        </span>
+        <span>Gender: {{ character.gender }}</span>
+        <span>Specie: {{ character.species }}</span>
+        <span>Location: {{ character.location.name }}</span>
+        <span>Origin: {{ character.origin.name }}</span>
+        <span>Type: {{ character.type }}</span>
+      </div>
+    </div>
+  </div>
+</div>

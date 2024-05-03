@@ -15,7 +15,13 @@
 
     <p>Specie: {{ character.species }}</p>
     <p>Gender: {{ character.gender }}</p>
-    <p>Status: {{ character.status }}</p>
-    <p>Origin: {{ character.origin.name }}</p>
+
+    <br />
+
+    <div class="flex items-center justify-center w-24 h-8 bg-white hover:bg-gray-300 transition-all text-black cursor-pointer rounded-xl">
+      <a [routerLink]="['/wiki/character', character.id]">
+        See more
+      </a>
+    </div>
   </div>
 </div>

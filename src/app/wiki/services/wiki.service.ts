@@ -19,4 +19,10 @@ export class WikiService {
 
     return this.http.get<SearchResponse>(url);
   };
+
+  getCharacter(id: number): Observable<Character> {
+    const url: string = `${this.apiUrl}/character/${id}`;
+
+    return this.http.get<Character>(url);
+  };
 }
